@@ -2,6 +2,8 @@
 
 RELEASE_DIRECTORY=./release
 
+
+mkdir -p $RELEASE_DIRECTORY
 echo "Preparing release for version: $TRAVIS_TAG"
 cp "./README.md" "$RELEASE_DIRECTORY"
 cp "./LICENSE" "$RELEASE_DIRECTORY"
