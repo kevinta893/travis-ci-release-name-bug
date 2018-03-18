@@ -2,13 +2,17 @@
 
 [![Build Status](https://travis-ci.org/kevinta893/travis-ci-release-name-bug.svg?branch=master)](https://travis-ci.org/kevinta893/travis-ci-release-name-bug)
 
+The 'master' branch is the branch with the failing builds.
+The 'release-workaround' branch is the branch with a fix. The idea is that you do not name the file you wish to deploy to Github Releases with a special character like the '+'
+
 Replicating the issue:
 
 1. First setup Travis CI using the Github Personal access tokens method.
 2. Make a Github Release deploy for a zip file with a name with characters like the '+' symbol (e.g. travis+bug+here-v1.0.zip)
 3. Have Travis-CI build and deploy the release. It should pass the first time. The release folder has a file named travis.bug.here-v1.0.zip instead
-4. Restart the build and deploy the release. You should get an issue during the **deploy** phase. Typically I recieve the error below (see Figure 1)
+4. Restart the build and deploy the release. You should get an issue during the **deploy** phase. Typically I recieve the error below (see Figure 1). This stalls Travis for 10 minutes and fails the build.
 5. If you change the name (say the zip is now "Travis-Deploy-Bug-v1.0.zip") it should pass in all subsequent build and deploys.
+
 
 **Figure 1**
 ```
