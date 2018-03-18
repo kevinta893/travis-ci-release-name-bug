@@ -1,5 +1,7 @@
 # travis-ci-release-name-bug
 
+[![Build Status](https://travis-ci.org/kevinta893/travis-ci-release-name-bug.svg?branch=master)](https://travis-ci.org/kevinta893/travis-ci-release-name-bug)
+
 Replicating the issue:
 
 1. First setup Travis CI using the Github Personal access tokens method.
